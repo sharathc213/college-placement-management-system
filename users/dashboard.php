@@ -3,9 +3,9 @@
 
 
 
-if (!isset($_SESSION['admin'])  || !isset($_SESSION['username'])) {
+if (!isset($_SESSION['user'])  || !isset($_SESSION['username'])) {
 
-    echo "<script>window.open(''../loginadmin.php','_self'')</script>";
+    echo "<script>window.open(''../loginuser.php','_self'')</script>";
 } else {
     $username = $_SESSION['username'];
 

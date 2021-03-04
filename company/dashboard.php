@@ -1,15 +1,15 @@
-
 <?php
 
 
 
-if (!isset($_SESSION['admin'])  || !isset($_SESSION['username'])) {
+if (!isset($_SESSION['company'])  || !isset($_SESSION['username'])) {
 
-    echo "<script>window.open(''../loginadmin.php','_self'')</script>";
+    echo "<script>window.open(''../logincompany.php','_self'')</script>";
 } else {
     $username = $_SESSION['username'];
 
-?><section id="main-content">
+?>
+<section id="main-content">
       <section class="wrapper">
         <!--overview start-->
         <div class="row">
@@ -674,4 +674,5 @@ if (!isset($_SESSION['admin'])  || !isset($_SESSION['username'])) {
         </div>
       </div>
     </section>
+
     <?php } ?>
