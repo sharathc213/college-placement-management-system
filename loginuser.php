@@ -10,18 +10,17 @@
   <link rel="shortcut icon" href="users/img/favicon.png">
 
   <title>User Login</title>
-
-  <!-- Bootstrap CSS -->
-  <link href="users/css/bootstrap.min.css" rel="stylesheet">
+ <!-- Bootstrap CSS -->
+ <link href="admin/css/bootstrap.min.css" rel="stylesheet">
   <!-- bootstrap theme -->
-  <link href="users/css/bootstrap-theme.css" rel="stylesheet">
+  <link href="admin/css/bootstrap-theme.css" rel="stylesheet">
   <!--external css-->
   <!-- font icon -->
-  <link href="users/css/elegant-icons-style.css" rel="stylesheet" />
-  <link href="users/css/font-awesome.css" rel="stylesheet" />
+  <link href="admin/css/elegant-icons-style.css" rel="stylesheet" />
+  <link href="admin/css/font-awesome.css" rel="stylesheet" />
   <!-- Custom styles -->
-  <link href="users/css/style.css" rel="stylesheet">
-  <link href="users/css/style-responsive.css" rel="stylesheet" />
+  <link href="admin/css/style.css" rel="stylesheet">
+  <link href="admin/css/style-responsive.css" rel="stylesheet" />
 
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 -->
   <!--[if lt IE 9]>
@@ -29,12 +28,7 @@
     <script src="js/respond.min.js"></script>
     <![endif]-->
 
-    <!-- =======================================================
-      Theme Name: NiceAdmin
-      Theme URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
-      Author: BootstrapMade
-      Author URL: https://bootstrapmade.com
-    ======================================================= -->
+    
 </head>
 
 <body class="login-img3-body">
@@ -47,31 +41,20 @@
         <center><span class="error_user" style="color:red;"></span></center>
         <div class="input-group">
           <span class="input-group-addon"><i class="icon_profile"></i></span>
-          <input type="text" class="form-control" id="user_email" placeholder="User_email" autofocus>
+          <input type="text" class="form-control" placeholder="Username"  id="user_email" autofocus>
         </div>
         <div class="input-group">
           <span class="input-group-addon"><i class="icon_key_alt"></i></span>
-          <input type="password" class="form-control" id="user_password" placeholder="Password">
+          <input type="password" class="form-control" placeholder="Password" id="user_password">
         </div>
         <label class="checkbox">
                 <input type="checkbox" value="remember-me"> Remember me
                 <span class="pull-right"> <a href="#"> Forgot Password?</a></span>
             </label>
         <button class="btn btn-primary btn-lg btn-block" type="button" onclick="login(event,'user');">Login</button>
-        <button class="btn btn-info btn-lg btn-block" type="button" >Signup</button>
+       <button class="btn btn-info btn-lg btn-block" type="button" onclick="signup(event,'user');">Signup</button>
       </div>
     </form>
-    <div class="text-right">
-      <div class="credits">
-          <!--
-            All the links in the footer should remain intact.
-            You can delete the links only if you purchased the pro version.
-            Licensing information: https://bootstrapmade.com/license/
-            Purchase the pro version form: https://bootstrapmade.com/buy/?theme=NiceAdmin
-          -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-        </div>
-    </div>
   </div>
 
 
@@ -79,7 +62,7 @@
 <script src="./assets/js/jquery.min.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<!-- <script src="./js/bootstrap.min.js"></script> -->
+
 <script src='./assets/js/login.js'></script>
 
 </html>

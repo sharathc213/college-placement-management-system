@@ -1,0 +1,40 @@
+<?php
+
+
+
+if (!isset($_SESSION['company'])  || !isset($_SESSION['username'])) {
+
+    echo "<script>window.open(''../logincompany.php','_self'')</script>";
+} else {
+    $username = $_SESSION['username'];
+
+?>
+    <section id="main-content">
+        <section class="wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="recent">
+                        <center> <mark><h3>Job Information</h3></mark></center>
+                    </div>
+                    <div id="sendmessage">Job has been posted successfully</div>
+                    <div id="errormessage"></div>
+                    <form action="" method="post" role="form" class="contactForm">
+                        <div class="form-group">
+                            <input type="text" name="job name" class="form-control" id="job_name" placeholder="Job Title" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                            <div class="valid" style="color:red" id="job_name_error"></div>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" id="job_details" name="Job Details" rows="3" data-rule="required" data-msg="Please write the About Job" placeholder="Job Details"></textarea>
+                            <div class="valid"  style="color:red" id="job_details_error" ></div>
+                        </div>
+
+
+                        <div class="text-center"><button type="button" onclick="post_job();" class="btn btn-primary btn-lg">Add Job</button></div>
+                    </form>
+                </div>
+
+
+            </div>
+        </section>
+    </section>
+    <?php } ?>

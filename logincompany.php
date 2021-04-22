@@ -29,12 +29,6 @@
     <script src="js/respond.min.js"></script>
     <![endif]-->
 
-    <!-- =======================================================
-      Theme Name: NiceAdmin
-      Theme URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
-      Author: BootstrapMade
-      Author URL: https://bootstrapmade.com
-    ======================================================= -->
 </head>
 
 <body class="login-img3-body">
@@ -59,21 +53,11 @@
                 <input type="checkbox" value="remember-me"> Remember me
                 <span class="pull-right"> <a href="#"> Forgot Password?</a></span>
             </label>
-        <button class="btn btn-primary btn-lg btn-block" type="submit" onclick="login(event,'company');">Login</button>
+        <button class="btn btn-primary btn-lg btn-block" type="button" onclick="login(event,'company');">Login</button>
         <button class="btn btn-info btn-lg btn-block" type="button">Signup</button>
       </div>
     </form>
-    <div class="text-right">
-      <div class="credits">
-          <!--
-            All the links in the footer should remain intact.
-            You can delete the links only if you purchased the pro version.
-            Licensing information: https://bootstrapmade.com/license/
-            Purchase the pro version form: https://bootstrapmade.com/buy/?theme=NiceAdmin
-          -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-        </div>
-    </div>
+    
   </div>
 
 

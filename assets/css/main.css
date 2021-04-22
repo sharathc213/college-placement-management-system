@@ -1186,20 +1186,6 @@ ol {
     text-align: center;
 }
 
-.button .btn {
-    display: inline-block;
-    text-transform: capitalize;
-    font-size: 14px;
-    font-weight: 500;
-    padding: 15px 30px;
-    background-color: #2042e3;
-    color: #fff;
-    border: none;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-    border-radius: 4px;
-}
-
 .button .btn:hover {
     background-color: #081828;
     color: #fff;
@@ -2392,143 +2378,6 @@ ol {
 }
 
 
-/*=============================
-	Pricing Table CSS
-===============================*/
-
-.pricing-table {
-    background: #f6f9fc;
-    position: relative;
-}
-
-.pricing-table .single-table {
-    background: #fff;
-    text-align: left;
-    position: relative;
-    -webkit-transition: all 0.4s ease;
-    transition: all 0.4s ease;
-    padding: 55px 50px;
-    -webkit-box-shadow: 0 1rem 3rem rgba(35, 38, 45, 0.15) !important;
-    box-shadow: 0 1rem 3rem rgba(35, 38, 45, 0.15) !important;
-    overflow: hidden;
-    border-radius: 5px;
-}
-
-.pricing-table .single-table .table-head {
-    position: relative;
-    padding-bottom: 18px;
-    border-bottom: 1px solid #edeff2;
-}
-
-.pricing-table .single-table .table-head::before {
-    position: absolute;
-    content: '';
-    background: #e4e8ed;
-    width: 15px;
-    height: 15px;
-    right: 0px;
-    bottom: -7px;
-    border-radius: 5px;
-}
-
-.pricing-table .single-table .table-head .title {
-    font-size: 18px;
-    line-height: 26px;
-    color: #081828;
-    font-weight: 500;
-    text-transform: uppercase;
-    margin-bottom: 19px;
-}
-
-.pricing-table .single-table .table-head .amount {
-    font-size: 40px;
-    line-height: 56px;
-    font-weight: 700;
-    color: #081828;
-}
-
-.pricing-table .single-table .table-head .duration {
-    color: #888;
-    font-size: 14px;
-    font-weight: 400;
-    display: inline-block;
-    margin-left: 7px;
-}
-
-.pricing-table .single-table .table-list {
-    position: relative;
-    display: block;
-    margin-top: 35px;
-}
-
-.pricing-table .single-table .table-list li {
-    position: relative;
-    display: block;
-    font-size: 14px;
-    line-height: 26px;
-    color: #081828;
-    font-weight: 400;
-    padding-left: 30px;
-    margin-bottom: 15px;
-}
-
-.pricing-table .single-table .table-list li:last-child {
-    margin-bottom: 0;
-}
-
-.pricing-table .single-table .table-list li::before {
-    position: absolute;
-    content: "\ea55";
-    font-family: 'lineIcons';
-    font-size: 7px;
-    color: #fff;
-    width: 15px;
-    height: 15px;
-    line-height: 15px;
-    text-align: center;
-    border-radius: 3px;
-    left: 0px;
-    top: 6px;
-    background-color: #2042e3;
-}
-
-.pricing-table .single-table .button {
-    margin-top: 40px;
-}
-
-.pricing-table .single-table .button .btn {
-    font-size: 13px;
-}
-
-
-/*======================================
-   Clients CSS
-========================================*/
-
-.client-logo-section {
-    background: #F9FAFF;
-    padding: 50px 0;
-}
-
-.client-logo-section .client-logo-wrapper .client-logo-carousel .client-logo {
-    padding: 10px;
-    text-align: center;
-    margin: auto;
-}
-
-.client-logo-section .client-logo-wrapper .client-logo-carousel .client-logo img {
-    max-width: 220px;
-    width: 100%;
-    opacity: .3;
-    -webkit-transition: all .3s ease-out 0s;
-    transition: all .3s ease-out 0s;
-}
-
-.client-logo-section .client-logo-wrapper .client-logo-carousel .client-logo img:hover {
-    opacity: 1;
-}
-
-
 /*======================================
     Apply Process CSS
 ========================================*/
@@ -2590,6 +2439,29 @@ ol {
 .apply-process .process-item p {
     color: #fff;
     display: block;
+}
+
+.apply-process .process-item a.button {
+    color: white;
+    padding: 10px 25px;
+    background: transparent;
+    border: 1px solid;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+}
+
+.apply-process .process-item a.button:hover {
+    background-color: transparent;
+    color: black;
+    transition: 0.5s ease-in-out;
+}
+
+@media all and (max-width:30em) {
+    .apply-process .process-item a.button {
+        display: block;
+        margin: 0.2em auto;
+    }
 }
 
 
@@ -2792,107 +2664,6 @@ ol {
     color: #fff;
     background-color: #2042e3;
     border-color: transparent;
-}
-
-
-/*======================================
-    Call Action CSS
-========================================*/
-
-.call-action {
-    background-image: url("../images/call-action/cat-bg.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    z-index: 2;
-}
-
-.call-action.style2 {
-    background-color: #2042e3;
-    background-image: none;
-    padding: 70px 0;
-}
-
-.call-action.style2 .text h2 {
-    font-size: 30px;
-    font-weight: 700;
-    color: #fff;
-}
-
-.call-action.style2 .button {
-    position: relative;
-}
-
-.call-action.style2 .button::before {
-    position: absolute;
-    content: "";
-    left: 0;
-    top: 26px;
-    height: 2px;
-    width: 48%;
-    border: 1px dashed #fff;
-}
-
-.call-action.style2 .button .btn {
-    background-color: #fff;
-    color: #2042e3;
-    float: right;
-}
-
-.call-action.style2 .button .btn:hover {
-    background-color: #081828;
-    color: #fff;
-}
-
-.call-action .section-title {
-    padding: 0;
-    padding: 0px 50px;
-    margin: 0;
-}
-
-.call-action .section-title span {
-    color: #2042e3;
-    background-color: #fff;
-}
-
-.call-action .section-title h2 {
-    text-transform: none;
-    color: #fff;
-}
-
-.call-action .section-title h2::before {
-    background-color: #fff;
-}
-
-.call-action .section-title p {
-    color: #fff;
-}
-
-.call-action .section-title .button {
-    display: block;
-    margin-top: 50px;
-}
-
-.call-action .section-title .button .btn {
-    background-color: #fff;
-    color: #2042e3;
-}
-
-.call-action .section-title .button .btn i {
-    display: inline-block;
-    margin-right: 5px;
-    font-size: 15px;
-}
-
-.call-action .section-title .button .btn:hover {
-    color: #fff;
-    background-color: #081828;
-}
-
-.call-action.overlay::before {
-    background-color: #2042e3;
-    opacity: 0.8;
-    z-index: -1;
 }
 
 
@@ -4661,16 +4432,6 @@ ol {
     color: blue !important;
 }
 
-button {
-    color: white;
-    padding: 10px 25px;
-    background: transparent;
-    border: 1px solid;
-    border-radius: 20px;
-    outline: none;
-    cursor: pointer;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -4701,18 +4462,17 @@ button {
     justify-content: space-between;
 }
 
-button {
+.btn {
+    color: white;
+    padding: 10px 25px;
+    background: transparent;
+    border: 1px solid;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: transparent;
     display: inline-block;
-    text-transform: capitalize;
-    font-size: 14px;
-    font-weight: 500;
-    padding: 15px 30px;
-    background-color: #2042e3;
-    color: #fff;
-    border: none;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
 }
 
 

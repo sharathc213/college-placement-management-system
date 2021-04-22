@@ -20,8 +20,6 @@
     <link rel="stylesheet" href="assets/css/tiny-slider.css" />
     <link rel="stylesheet" href="assets/css/glightbox.min.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="web.html" />
     <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
 
 </head>
@@ -35,7 +33,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-12">
                         <nav class="navbar navbar-expand-lg">
-                            <a class="navbar-brand logo" href="index.html">
+                            <a class="navbar-brand logo">
                                 <img class="logo1" src="assets/images/logo/logo.svg" alt="Logo" />
                             </a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,7 +44,7 @@
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul id="nav" class="navbar-nav ml-auto">
                                     <li class="nav-item">
-                                        <a class="active" href="index.html">Home</a>
+                                        <a class="" href="#home">Home</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="" href="#login">Login/Register</a>
@@ -71,7 +69,7 @@
     <!-- End Header Area -->
 
     <!-- Start Hero Area -->
-    <section class="hero-area">
+    <section class="hero-area" id="home">
         <!-- Single Slider -->
         <div class="hero-inner">
             <div class="container">
@@ -121,7 +119,7 @@
                         <i class="lni lni-user"></i>
                         <h4>Job Applicant</h4>
                         <p>Register or Login as Job Applicant.</p><br>
-                        <button  type="button"><a href="loginuser.php">Login</a></button> <button type="button">Sign Up</button>
+                        <a href="loginuser.php" class="button">Login</a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-12">
@@ -129,7 +127,7 @@
                         <i class="lni lni-crown"></i>
                         <h4>Admin</h4>
                         <p>Admin access Login Page.</p><br>
-                        <button type="button" class="button"><a href="loginadmin.php">Login</a></button>
+                        <a href="loginadmin.php" class="button">Login</a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-12">
@@ -137,7 +135,7 @@
                         <i class="lni lni-apartment"></i>
                         <h4>Company</h4>
                         <p>Login with your Company Details.</p><br>
-                        <button type="button"><a href="logincompany.php">Login</a></button>
+                        <a href="logincompany.php" class="button">Login</a>
                     </div>
                 </div>
             </div>
@@ -160,7 +158,8 @@
             <div class="cat-head">
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-12">
-                        <a href="job-details.html" class="single-cat wow fadeInUp" data-wow-delay=".2s">
+     
+                        <a href="" class="single-cat wow fadeInUp" data-wow-delay=".2s">
                             <div class="icon">
                                 <i class="lni lni-cog"></i>
                             </div>
@@ -212,65 +211,6 @@
         </div>
     </section>
     <!-- /End Job Category Area -->
-
-    <!-- Start Call Action Area -->
-    <section class="call-action overlay section">
-        <div class="container">
-            <div class="row ">
-                <div class="col-lg-8 offset-lg-2 col-12">
-                    <div class="inner">
-                        <div class="section-title">
-                            <span class="wow fadeInDown" data-wow-delay=".2s">Be ready with your jobs</span>
-                            <h2 class="wow fadeInUp" data-wow-delay=".4s">We assure that you will get the job.</h2>
-                            <p class="wow fadeInUp" data-wow-delay=".6s">"You are <b>MORE THAN</b> what you do.<b>YOUR TITLE</b> should not confine you & <b>YOUR JOB</b> does not define you.
-                                <br><b>A year</b> from now you will wish you had started <b>today</b></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-    </section>
-    <!-- /End Call Action Area -->
-
-
-    <!-- Start Clients Area -->
-    <div class="client-logo-section">
-        <div class="container">
-            <div class="client-logo-wrapper">
-                <div class="client-logo-carousel d-flex align-items-center justify-content-between">
-                    <div class="client-logo">
-                        <img src="assets/images/clients/client1.png" alt="#">
-                    </div>
-                    <div class="client-logo">
-                        <img src="assets/images/clients/client2.png" alt="#">
-                    </div>
-                    <div class="client-logo">
-                        <img src="assets/images/clients/client3.png" alt="#">
-                    </div>
-                    <div class="client-logo">
-                        <img src="assets/images/clients/client4.png" alt="#">
-                    </div>
-                    <div class="client-logo">
-                        <img src="assets/images/clients/client5.png" alt="#">
-                    </div>
-                    <div class="client-logo">
-                        <img src="assets/images/clients/client6.png" alt="#">
-                    </div>
-                    <div class="client-logo">
-                        <img src="assets/images/clients/client2.png" alt="#">
-                    </div>
-                    <div class="client-logo">
-                        <img src="assets/images/clients/client3.png" alt="#">
-                    </div>
-                    <div class="client-logo">
-                        <img src="assets/images/clients/client4.png" alt="#">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Clients Area -->
     <!-- Start Middle Top -->
     <div class="footer-middle" id="contact">
         <div class="container">
@@ -335,7 +275,9 @@
     <script src="assets/js/tiny-slider.js "></script>
     <script src="assets/js/glightbox.min.js "></script>
     <script src="assets/js/main.js "></script>
+    <script src="./modal.js"></script>
     <script type="text/javascript ">
+   
         //====== Clients Logo Slider
         tns({
             container: '.client-logo-carousel',

@@ -22,7 +22,7 @@
   <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
   <link rel="shortcut icon" href="img/favicon.png">
 
-  <title>Creative - Bootstrap Admin Template</title>
+  <title>Job-Recruitement</title>
 
   <!-- Bootstrap CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -47,6 +47,9 @@
   <link href="css/style-responsive.css" rel="stylesheet" />
   <link href="css/xcharts.min.css" rel=" stylesheet">
   <link href="css/jquery-ui-1.10.4.min.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
   <!-- =======================================================
     Theme Name: NiceAdmin
     Theme URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
@@ -72,8 +75,10 @@
               
            
                 if(isset($_GET['dashboard'])) {include("./dashboard.php");}
-                if(isset($_GET['addcolleages'])) {include("./addcolleages.php");}
-                    
+                if(isset($_GET['addcompany'])) {include("./addcompany.php");}
+                if(isset($_GET['viewcompany'])) {include("./viewcompany.php");}
+                if(isset($_GET['candidatelist'])) {include("./candidatelist.php");}
+                 
             
     
             ?>
@@ -167,6 +172,10 @@
         });
       });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+     <script src="./insert/insert.js"></script>
+    <script src="./view/view.js"></script>
+    <script src="./delete/delete.js"></script>
 
 </body>
 

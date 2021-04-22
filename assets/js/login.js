@@ -29,7 +29,7 @@ function validate(which, email, password) {
     if (email != "" && password != "") {
         $(".error_" + which).html("");
         return true;
-    } else $(".error_" + which).html("User Name or Password cannot bo empty");
+    } else $(".error_" + which).html("User Name or Password cannot be empty");
 }
 
 function check(which, email, password) {
