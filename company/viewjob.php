@@ -7,6 +7,10 @@ if (!isset($_SESSION['company'])  || !isset($_SESSION['username'])) {
     echo "<script>window.open(''../logincompany.php','_self'')</script>";
 } else {
     $username = $_SESSION['username'];
+    $get_com = "select * from company where email='$username'";
+$result_com = mysqli_query($con, $get_com);
+$row_com=mysqli_fetch_array($result_com);
+$com_code=$row_com['sl_no'];
 
 ?>
 <script src="js/jquery.js"></script>
@@ -16,7 +20,7 @@ if (!isset($_SESSION['company'])  || !isset($_SESSION['username'])) {
 
 <script src="./view/view.js"></script>
 <!-- <script src="./edit/edit.js"></script> -->
-<script>viewjob();</script>
+<script>viewjob('<?php echo $com_code; ?>');</script>
 <section id="main-content">
       <section class="wrapper">
 <div class="row">

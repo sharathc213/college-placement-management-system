@@ -23,7 +23,7 @@ if (isset($_POST['com_name']) && isset($_POST['email']) && isset($_POST['com_pin
     }
     $password = randomPassword();
 
-    $check = "select * from company where email = '$email'";
+    $check = "select * from company where email = '$email' or phno=$com_ph";
     $result_check = mysqli_query($con, $check);
     if (mysqli_num_rows($result_check) == 0) {
 

@@ -62,10 +62,10 @@ function add_company() {
     }
     if (com_ph == "" || com_ph.length > 10 || com_ph.length < 10) {
         $("#com_number_error").html("Please enter a phone number");
-        check = "";
+      
     } else {
         $("#com_number_error").html("");
-        check = "ok";
+    
     }
 
 
@@ -73,7 +73,15 @@ function add_company() {
 
     if (
 
-        check == "ok"
+        com_name  != "" &&
+        com_address != "" &&
+        com_pincode != "" &&
+        com_pincode.length == 6 &&
+        email != "" &&
+        com_ph.length == 10 &&
+      com_ph != "" &&
+     
+      check == "ok"
     ) {
 
         $.post(

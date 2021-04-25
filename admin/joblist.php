@@ -16,14 +16,14 @@ if (!isset($_SESSION['admin'])  || !isset($_SESSION['username'])) {
 
 <script src="./view/view.js"></script>
 <script src="./eddit/eddit.js"></script>
-<script>viewcompany();</script>
+<script>viewjobs();</script>
 <section id="main-content">
       <section class="wrapper">
 <div class="row">
           <div class="col-lg-12">
             <section class="panel">
               <header class="panel-heading">
-                View Company
+                View Jobs
               </header>
 
              <div class="table-section"></div>

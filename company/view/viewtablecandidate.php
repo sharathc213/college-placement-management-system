@@ -12,7 +12,11 @@ $get_company= "select * from user  order by sl_no";
 
 
 // Design initial table header 
-$data = '   <table class="table table-striped table-advance table-hover">
+$data = ' 
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui-1.10.4.min.js"></script>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.9.2.custom.min.js"></script>  <table class="table table-striped table-advance table-hover" id="dataTables-example">
 <tbody>
   <tr>
     <th><i class="icon_profile"></i> sl no</th>
@@ -69,6 +73,13 @@ $data = '   <table class="table table-striped table-advance table-hover">
 
 $data .= ' </tbody>
 </table>
+<script>
+$(document).ready(function() {
+    $("#dataTables-example").DataTable({
+            responsive: true
+    });
+});
+</script>
 
          ';
 

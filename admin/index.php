@@ -49,6 +49,7 @@
   <link href="css/jquery-ui-1.10.4.min.css" rel="stylesheet">
     <!-- Custom Fonts -->
     <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css" rel="stylesheet">
 
   <!-- =======================================================
     Theme Name: NiceAdmin
@@ -78,6 +79,7 @@
                 if(isset($_GET['addcompany'])) {include("./addcompany.php");}
                 if(isset($_GET['viewcompany'])) {include("./viewcompany.php");}
                 if(isset($_GET['candidatelist'])) {include("./candidatelist.php");}
+                if(isset($_GET['joblist'])) {include("./joblist.php");}
                  
             
     
@@ -127,6 +129,7 @@
     <script src="js/sparklines.js"></script>
     <script src="js/charts.js"></script>
     <script src="js/jquery.slimscroll.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
     <script>
       //knob
       $(function() {

@@ -15,7 +15,7 @@ if (!isset($_SESSION['admin'])  || !isset($_SESSION['username'])) {
   <script type="text/javascript" src="js/jquery-ui-1.9.2.custom.min.js"></script>
 
 <script src="./view/view.js"></script>
-<!-- <script src="./eddit/eddit.js"></script> -->
+<script src="./eddit/eddit.js"></script>
 <script>viewcandidate();</script>
 <section id="main-content">
       <section class="wrapper">

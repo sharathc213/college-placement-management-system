@@ -1,6 +1,6 @@
-function viewjob() {
+function viewjob(com_code) {
     $.post("view/viewtablejobs.php", {
-
+      com_code
 
     }, function(data, status) {
         // close the popup

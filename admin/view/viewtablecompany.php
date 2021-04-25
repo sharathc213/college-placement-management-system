@@ -12,8 +12,8 @@ $get_company = "select * from company  order by sl_no";
 
 
 // Design initial table header 
-$data = '   <table class="table table-striped table-advance table-hover">
-<tbody>
+$data = '   <table class="table table-striped table-advance table-hover" id="dataTables-example">
+<thead>
   <tr>
     <th><i class="icon_profile"></i> sl no</th>
     <th><i class="icon_calendar"></i> Company Name</th>
@@ -22,8 +22,9 @@ $data = '   <table class="table table-striped table-advance table-hover">
     <th><i class="icon_cogs"></i> District</th>
     <th><i class="icon_cogs"></i> Pincode</th>
     <th><i class="icon_mobile"></i> Mobile</th>
+    <th> Eddit/Delete</th>
     
-  </tr>
+  </tr></thead><tbody>
 
 
 
@@ -57,7 +58,7 @@ while ($row_company = mysqli_fetch_array($run_company)) {
   $i++;
   $data .= '
         <tr>
-        <td>' . $sl_no . '</td>
+        <td>' . $i . '</td>
         <td>' . $company_name . '</td>
         <td>' . $company_email . '</td>
         <td>' . $address . '</td>
@@ -66,9 +67,9 @@ while ($row_company = mysqli_fetch_array($run_company)) {
         <td>' . $phno . '</td>
         <td>
           <div class="btn-group">
-            <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
+            <a class="btn btn-primary" onclick="edditcom('.$sl_no.')" href="#">Eddit</a>
            
-            <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
+            <a class="btn btn-danger" onclick="deletecom('.$sl_no.')" href="#">Delete</a>
           </div>
         </td>
       </tr>';
@@ -77,6 +78,11 @@ while ($row_company = mysqli_fetch_array($run_company)) {
 
 $data .= ' </tbody>
 </table>
+<script>
+$(document).ready( function () {
+  $("#dataTables-example").DataTable();
+} );
+</script>
 
          ';
 

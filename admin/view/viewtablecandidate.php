@@ -6,24 +6,26 @@ include("../../db.php");
 
 
 
-$get_company= "select * from user  order by sl_no";
+$get_can= "select * from user  order by sl_no";
 
 
 
 
 // Design initial table header 
-$data = '   <table class="table table-striped table-advance table-hover">
-<tbody>
+$data = '   <table class="table table-striped table-advance table-hover" id="dataTables-example">
+<thead>
   <tr>
     <th><i class="icon_profile"></i> sl no</th>
     <th><i class="icon_calendar"></i> Name</th>
     <th><i class="icon_mail_alt"></i> Email</th>
+    <th><i class="icon_mail_alt"></i> Status</th>
+    <th> View</th>
    
   
   </tr>
 
 
-
+</thead><tbody>
 
 
 
@@ -37,29 +39,37 @@ $data = '   <table class="table table-striped table-advance table-hover">
                         
                           
                             
-                            $run_company = mysqli_query($con,$get_company);
+                            $run_can = mysqli_query($con,$get_can);
       
-                            while($row_company=mysqli_fetch_array($run_company)){
+                            while($row_can=mysqli_fetch_array($run_can)){
                                 
-                                $company_name = $row_company['name'];
+                                $can_name = $row_can['name'];
                                 
-                                $company_email = $row_company['email'];
+                                $can_email = $row_can['email'];
                                 
-                                $sl_no = $row_company['sl_no'];
+                                $sl_no = $row_can['sl_no'];
+                                $status = $row_can['status'];
                              
                                 
                                 $i++;
         $data .= '
         <tr>
-        <td>'.$sl_no.'</td>
-        <td>'.$company_name.'</td>
-        <td>'.$company_email.'</td>
+        <td>'.$i.'</td>
+        <td>'.$can_name.'</td>
+        <td>'.$can_email.'</td>';
+        if($status==2){
+          $data .= '   <td>NOT VERIFIED</td>';
+        }else if($status==1){
+          $data .= '   <td>VERIFIED</td>';
+        }
+
+       
       
-        <td>
+      $data .= '     <td>
           <div class="btn-group">
-            <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
+            <a class="btn btn-primary" onclick="eddituser('.$sl_no.',`'.$can_name.'`,`'.$can_email.'`,'.$status.');" href="#"><i class="icon_plus_alt2"></i></a>
            
-            <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
+        
           </div>
         </td>
       </tr>';
@@ -69,6 +79,11 @@ $data = '   <table class="table table-striped table-advance table-hover">
 
 $data .= ' </tbody>
 </table>
+<script>
+$(document).ready( function () {
+  $("#dataTables-example").DataTable();
+} );
+</script>
 
          ';
 

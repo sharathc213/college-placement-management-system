@@ -19,3 +19,14 @@ function viewcandidate() {
         $(".table-section").html(data);
     });
 }
+
+function viewjobs() {
+    $.post("view/viewtablejobs.php", {
+
+
+    }, function(data, status) {
+        // close the popup
+
+        $(".table-section").html(data);
+    });
+}

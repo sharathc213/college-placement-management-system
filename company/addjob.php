@@ -19,17 +19,21 @@ if (!isset($_SESSION['company'])  || !isset($_SESSION['username'])) {
                     <div id="sendmessage">Job has been posted successfully</div>
                     <div id="errormessage"></div>
                     <form action="" method="post" role="form" class="contactForm">
-                        <div class="form-group">
-                            <input type="text" name="job name" class="form-control" id="job_name" placeholder="Job Title" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                            <div class="valid" style="color:red" id="job_name_error"></div>
+                    <div class="form-group">
+                            <input  style="text-transform:uppercase" type="text" name="job code" class="form-control" id="job_code" placeholder="Job Code" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                            <div class="valid" style="color:red" id="job_code_error"></div>
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" id="job_details" name="Job Details" rows="3" data-rule="required" data-msg="Please write the About Job" placeholder="Job Details"></textarea>
+                            <input  style="text-transform:uppercase" type="text" name="job name" class="form-control" id="job_name" placeholder="Job Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                            <div class="valid" style="color:red" id="job_name_error"></div>
+                        </div>
+                        <div  class="form-group">
+                            <textarea   style="text-transform:uppercase" class="form-control" id="job_details" name="Job Details" rows="3" data-rule="required" data-msg="Please write the About Job" placeholder="Job Details"></textarea>
                             <div class="valid"  style="color:red" id="job_details_error" ></div>
                         </div>
 
 
-                        <div class="text-center"><button type="button" onclick="post_job();" class="btn btn-primary btn-lg">Add Job</button></div>
+                        <div class="text-center"><button type="button" onclick="post_job('<?php echo $username ?>');" class="btn btn-primary btn-lg">Add Job</button></div>
                     </form>
                 </div>
 
