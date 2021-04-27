@@ -19,6 +19,7 @@ if( isset($_POST['sl_no']) && isset($_POST['com_code'])){
             $job_code = $row_job['jobcode'];
             $jobdetails = $row_job['jobdetails'];
             $status = $row_job['status'];
+            $qname = $row_job['qualification'];
 
             $get_com = "select * from company where sl_no='$comcode'";
             $run_com = mysqli_query($con,$get_com);
@@ -51,6 +52,11 @@ if( isset($_POST['sl_no']) && isset($_POST['com_code'])){
               <input disabled value="'.$jobname.'" type="text" name="name" class="form-control" id="com_name" placeholder="Company Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
               <div class="validati" style="color:red"id="com_name_error"></div>
             </div>
+            <div class="form-group">
+            <label >Min Qualification</label>
+              <input disabled value="'.$qname.'" type="text" name="name" class="form-control" id="com_name" placeholder="Company Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+              <div class="validati" style="color:red"id="com_name_error"></div>
+            </div>
         
             <div class="form-group">
             <label >Job Details</label>
@@ -58,7 +64,7 @@ if( isset($_POST['sl_no']) && isset($_POST['com_code'])){
               <div class="validat" style="color:red" id="com_address_error"></div>
             </div>';
            
-            if($status==1){
+            if($status==1 || $status==3){
                 $data .= "      <div class='text-center'><button  onclick='verifyjob($sl_no,2);' class='btn btn-primary btn-lg'>VERIFY</button> <br>";
                }else if($status==2){
                 $data .= "      <div class='text-center'><button  onclick='verifyjob($sl_no,1);' class='btn btn-danger btn-lg'>CANCLE VERIFY</button> <br>";

@@ -83,7 +83,7 @@ if( isset($_POST['sl_no']) && isset($_POST['name']) && isset($_POST['email']) &&
             if($cv==""){
               $data .= '      <button disabled  class="btn btn-danger" id="usr_number" >view</button>';
             }else{
-              $data .= '      <button   class="btn btn-success">view</button>';
+              $data .= '      <button   class="btn btn-success" onclick="verifypdf(`'.$cv.'`);">view</button>';
              
             }
           

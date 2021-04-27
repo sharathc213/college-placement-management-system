@@ -24,6 +24,7 @@ $data = '
     <th><i class="icon_profile"></i> sl no</th>
     <th><i class="icon_calendar"></i> Job Code</th>
     <th><i class="icon_calendar"></i> Job Name</th>
+    <th><i class="icon_calendar"></i> Min Qualification</th>
     <th><i class="icon_mail_alt"></i> Job Details</th>
     
     <th><i class="icon_mail_alt"></i> Status</th>
@@ -61,6 +62,7 @@ $data = '
                                 
                                 $sl_no = $row_job['sl_no'];
                                 $status = $row_job['status'];
+                                $qname = $row_job['qualification'];
                              
                                
                                 $i++;
@@ -69,13 +71,15 @@ $data = '
         <td>'.$i.'</td>
         <td>'.$job_code.'</td>
         <td>'.$job_name.'</td>
+        <td>'.$qname.'</td>
         <td>'.$job_detail.'</td>';
         if($status==1){
           $data .= '  <td>NOT VERIFIED</td>';
         }else if($status==2){
         $data .= '  <td>VERIFIED</td>';
-        }
-      
+        }else if($status==3){
+          $data .= '  <td>RESUBMITED</td>';
+          }
        
         $data .= '    <td>
           <div class="btn-group">

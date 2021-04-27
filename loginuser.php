@@ -52,7 +52,7 @@
                 <span class="pull-right"> <a href="#"> Forgot Password?</a></span>
             </label>
         <button class="btn btn-primary btn-lg btn-block" type="button" onclick="login(event,'user');">Login</button>
-       <button class="btn btn-info btn-lg btn-block" type="button" onclick="signup(event,'user');">Signup</button>
+        <button class="btn btn-info btn-lg btn-block" type="button" ><a href="./signupuser.php">Signup</a></button>
       </div>
     </form>
   </div>

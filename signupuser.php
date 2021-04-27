@@ -9,7 +9,7 @@
   <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
   <link rel="shortcut icon" href="users/img/favicon.png">
 
-  <title>User Registration</title>
+  <title>User Login</title>
  <!-- Bootstrap CSS -->
  <link href="admin/css/bootstrap.min.css" rel="stylesheet">
   <!-- bootstrap theme -->
@@ -41,8 +41,12 @@
         <center><span class="error_user" style="color:red;"></span></center>
         <div class="input-group">
           <span class="input-group-addon"><i class="icon_profile"></i></span>
+          <input type="text" class="form-control" placeholder="Username"  id="user_name" autofocus>
+        </div>
+        <div class="input-group">
+          <span class="input-group-addon"><i class="icon_profile"></i></span>
           <input type="text" class="form-control" placeholder="Username"  id="user_email" autofocus>
-        </div>  
+        </div>
         <div class="input-group">
           <span class="input-group-addon"><i class="icon_key_alt"></i></span>
           <input type="password" class="form-control" placeholder="Password" id="user_password">
@@ -51,7 +55,8 @@
                 <input type="checkbox" value="remember-me"> Remember me
                 <span class="pull-right"> <a href="#"> Forgot Password?</a></span>
             </label>
-        <button class="btn btn-primary btn-lg btn-block" type="button" onclick="signup(event,'user');">Register</button>
+        <button class="btn btn-primary btn-lg btn-block" type="button" onclick="signup(event,'user');">Signup</button>
+       
       </div>
     </form>
   </div>
@@ -63,5 +68,6 @@
 <!-- Bootstrap Core JavaScript -->
 
 <script src='./assets/js/login.js'></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 
 </html>

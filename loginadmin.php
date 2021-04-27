@@ -45,7 +45,7 @@
                 <span class="pull-right"> <a href="#"> Forgot Password?</a></span>
             </label>
         <button class="btn btn-primary btn-lg btn-block" type="button" onclick="login(event,'admin');">Login</button>
-        <button class="btn btn-info btn-lg btn-block" type="button">Signup</button>
+        <!-- <button class="btn btn-info btn-lg btn-block" type="button">Signup</button> -->
       </div>
     </form>
   </div>

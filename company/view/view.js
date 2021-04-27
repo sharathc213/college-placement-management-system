@@ -22,3 +22,14 @@ function viewcandidate() {
         $(".table-section").html(data);
     });
 }
+
+function viewtest(comcode) {
+    $.post("view/viewtabletest.php", {
+
+    comcode
+    }, function(data, status) {
+        // close the popup
+
+        $(".table-section").html(data);
+    });
+}

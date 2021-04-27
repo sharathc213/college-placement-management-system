@@ -67,6 +67,8 @@ while ($row_job = mysqli_fetch_array($run_job)) {
             $data .= '   <td>NOT VERIFIED</td>';
           }else if($status==2){
             $data .= '   <td>VERIFIED</td>';
+          }else if($status==3){
+            $data .= '   <td>EDDITED</td>';
           }
 
           $data .= '      <td>

@@ -80,6 +80,7 @@
                 if(isset($_GET['viewcompany'])) {include("./viewcompany.php");}
                 if(isset($_GET['candidatelist'])) {include("./candidatelist.php");}
                 if(isset($_GET['joblist'])) {include("./joblist.php");}
+                if(isset($_GET['changepass'])) {include("./changepass.php");}
                  
             
     
@@ -179,6 +180,7 @@
      <script src="./insert/insert.js"></script>
     <script src="./view/view.js"></script>
     <script src="./delete/delete.js"></script>
+    <script src="./eddit/eddit.js"></script>
 
 </body>
 

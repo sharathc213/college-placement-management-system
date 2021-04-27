@@ -71,6 +71,10 @@
                 if(isset($_GET['addjob'])) {include("./addjob.php");}
                 if(isset($_GET['viewjob'])) {include("./viewjob.php");}
                 if(isset($_GET['userlist'])) {include("./userlist.php");}
+                if(isset($_GET['changepass'])) {include("./changepass.php");}
+                if(isset($_GET['addtest'])) {include("./addtest.php");}
+                if(isset($_GET['viewtest'])) {include("./viewtest.php");}
+                if(isset($_GET['profile'])) {include("./profile.php");}
                     
             
     
@@ -174,6 +178,7 @@
      <script src="./insert/insert.js"></script>
     <script src="./view/view.js"></script>
     <script src="./delete/delete.js"></script>
+    <script src="./eddit/eddit.js"></script>
 
 
 </body>

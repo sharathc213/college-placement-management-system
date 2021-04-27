@@ -7,27 +7,38 @@ include("db.php");
 
     $password = $_POST['password'];
     $username =$_POST['email'];
-    $which =$_POST['which'];
+    $name =$_POST['name'];
   
-  function signup($which,$username,$password,$con)
+  function signup($name,$username,$password,$con)
     {
   
        
-        $check ="select * from $which where password='$password' and email='$username'";
+        $check ="select * from user where name='$name' and password='$password' and email='$username'";
    
-        if ($result = mysqli_query($con,$check)) {
-            $rowcount=mysqli_num_rows($result);
-            if($rowcount==1){
-                $_SESSION[$which]=$which;
-                $_SESSION['username']=$username;
-                echo true;
-            }
-            else {echo false;}
-        }
+
+
+        
+                $result_check = mysqli_query($con, $check);
+                if (mysqli_num_rows($result_check) == 0) {
+            
+            
+            
+                    $query = "INSERT INTO user(email,password,name,status) VALUES('$username','$password','$name',1)";
+                    if (!$result = mysqli_query($con, $query)) {
+                        exit(mysqli_error());
+                        echo "some thing is wrong";
+                    } else {
+                        $_SESSION['user']="user";
+                        $_SESSION['username']=$username;
+                        echo 111;
+                    }
+                } else {
+                    echo 110;
+                }
     }
 
   
 
 
-   login($which,$username,$password,$con);
+   signup($name,$username,$password,$con);
 ?>
