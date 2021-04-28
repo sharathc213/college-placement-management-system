@@ -895,3 +895,25 @@ if (cpass == "") {
     //  }
   }
   
+
+
+
+  function edditusr(sl_no) {
+    // Add User ID to the hidden field for furture usage
+  
+    $.post(
+      "eddit/edditusr.php",
+      {
+     sl_no,
+  
+      },
+      function (data, status) {
+        // PARSE json data
+     
+        $(".panel-heading").html("Profile");
+        $(".table-section").html(data);
+      }
+    );
+    // Open modal popup
+  }
+  

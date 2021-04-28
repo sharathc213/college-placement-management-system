@@ -75,6 +75,7 @@
                 if(isset($_GET['addcolleages'])) {include("./addcolleages.php");}
                 if(isset($_GET['profile'])) {include("./profile.php");}
                 if(isset($_GET['changepass'])) {include("./changepass.php");}
+                if(isset($_GET['viewjobs'])) {include("./viewjobs.php");}
                     
             
     

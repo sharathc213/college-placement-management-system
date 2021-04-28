@@ -51,7 +51,7 @@ $url = intval($_GET['url']);
             currentPage: 1,
             zoom: 1
         }
-      
+ 
         pdfjsLib.getDocument('./<?php echo $url; ?>.pdf').then((pdf) => {
       
             myState.pdf = pdf;
