@@ -917,3 +917,23 @@ if (cpass == "") {
     // Open modal popup
   }
   
+
+
+  function edditapplication(sl_no) {
+    // Add User ID to the hidden field for furture usage
+  
+    $.post(
+      "eddit/edditapplication.php",
+      {
+     sl_no,
+  
+      },
+      function (data, status) {
+        // PARSE json data
+     
+        $(".panel-heading").html("");
+        $(".table-section").html(data);
+      }
+    );
+    // Open modal popup
+  }

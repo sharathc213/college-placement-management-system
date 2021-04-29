@@ -33,3 +33,15 @@ function viewtest(comcode) {
         $(".table-section").html(data);
     });
 }
+
+
+function viewapplication(comcode) {
+    $.post("view/viewapplication.php", {
+
+    comcode
+    }, function(data, status) {
+        // close the popup
+
+        $(".table-section").html(data);
+    });
+}

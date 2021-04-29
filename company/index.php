@@ -75,6 +75,7 @@
                 if(isset($_GET['addtest'])) {include("./addtest.php");}
                 if(isset($_GET['viewtest'])) {include("./viewtest.php");}
                 if(isset($_GET['profile'])) {include("./profile.php");}
+                if(isset($_GET['viewapplication'])) {include("./viewapplication.php");}
                     
             
     

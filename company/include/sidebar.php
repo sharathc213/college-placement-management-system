@@ -90,9 +90,9 @@
                       </a>
           </li>
           <li class="sub-menu">
-            <a href="contact.html" class="">
+            <a href="index.php?viewapplication" class="">
                           <i class="icon_document_alt"></i>
-                          <span>Reports</span>
+                          <span>View Application</span>
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
           </li>
