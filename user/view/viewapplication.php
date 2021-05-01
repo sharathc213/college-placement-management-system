@@ -10,7 +10,7 @@ $slno=$_POST['sl_no'];
 // $com_code=$row_com['sl_no'];
 
 
-$get_job="select jobuser.verify,company.email,company.companyname,company.address,company.district,company.pincode,company.phno,job.jobcode,job.jobname,job.qualification,job.sl_no, job.companycode,job.jobdetails from jobuser,job,company where jobuser.userid=$slno and jobuser.jobid=job.sl_no and job.companycode=company.sl_no  ";
+$get_job="select jobuser.verify,company.email,company.companyname,company.address,company.district,company.pincode,company.phno,job.jobcode,job.jobname,job.qualification,job.sl_no, job.companycode,job.jobdetails,jobuser.userid from jobuser,job,company where jobuser.userid=$slno and jobuser.jobid=job.sl_no and job.companycode=company.sl_no  ";
 
 
 $i=0;
@@ -66,6 +66,7 @@ $data ='
                                 $jobdetails = $row_job['jobdetails'];
                                 $sl_no = $row_job['sl_no'];
                                 $verify = $row_job['verify'];
+                                $userid = $row_job['userid'];
                                
                                 
                                
@@ -88,8 +89,46 @@ $data ='
                  </div>
                  <div class="col-md-6">
                  Min Qualification: '.$qualification.'<br>
-                 Company Name: '.$companyname.'<br>
-                 </div>
+                 Company Name: '.$companyname.'<br>';
+                 if($verify==1){
+                  $data .='
+                  Status:<b style="color:orange"> Applayed </b>';
+                  }else if($verify==2){
+                    $get_exam="select exam.tname,examuser.examid from examuser,exam where examuser.userid=$userid and examuser.jobcode='$jobcode' and exam.sl_no=examuser.examid ";
+                    $run_exam = mysqli_query($con, $get_exam);
+
+                    $row_exam = mysqli_fetch_array($run_exam);
+                    $ename=$row_exam['tname'];
+                   $data .='
+                   Status: <b style="color:yellow"> Verified </b><button onclick="attendexam(`'.$jobcode.'`,'.$userid.',`'.$ename.'`);" class="btn btn-danger">Attand Exam</button>'; 
+                  }else if($verify==4){
+                   $data .='Status: <b style="color:green"> Approved </b><br><small style="color:black" > Please check your e-mail for further details</small>';
+                  }else if($verify==3){
+                   $data .='Status: <b style="color:red"> Application Rejected </b><br><small style="color:black" >You Are Not eligible for apply </small>';  
+                  }else if($verify==5){
+                    $get_job = "select * from job where jobcode='$jobcode'";
+$result_job= mysqli_query($con, $get_job);
+$row_job=mysqli_fetch_array($result_job);
+$jobid=$row_job['sl_no'];
+
+$get_exam="select exam.tname,examuser.examid from examuser,exam where examuser.userid=$userid and examuser.jobcode='$jobcode' and exam.sl_no=examuser.examid ";
+$run_exam = mysqli_query($con, $get_exam);
+
+$row_exam = mysqli_fetch_array($run_exam);
+$ename=$row_exam['tname'];
+
+$get_exam = "select * from exam where tname='$ename'";
+$result_exam= mysqli_query($con, $get_exam);
+$row_exam=mysqli_fetch_array($result_exam);
+$eid=$row_exam['sl_no'];
+                    $get_m="select * from examuser where userid=$userid && jobcode='$jobcode' && examid=$eid";
+                    $run_m = mysqli_query($con, $get_m);
+
+                    $row_m = mysqli_fetch_array($run_m);
+                    $mark=$row_m['mark'];
+                    $data .='Status: <b style="color:red"> Exam Attended </b><br><small style="color:black" >You Got '.$mark.' marks out of 5 In the exam</small>';  
+                   }
+                  $data .='   </div>
                  </div>
                </a>
              </h5>
@@ -101,17 +140,7 @@ $data ='
              <div class="col-md-6">
              <h4>Job Details</h4><br>
            '.$jobdetails.'<br><br>';
-           if($verify==1){
-           $data .='
-           Status:<b style="color:orange"> Applayed </b>';
-           }else if($verify==2){
-            $data .='
-            Status: <b style="color:yellow"> Verified </b><button class="btn btn-danger">Attand Exam</button>'; 
-           }else if($verify==3){
-            $data .='Status: <b style="color:green"> Approved </b><br><small class="btn btn-danger"> Please check your e-mail for further details</small>';
-           }else if($verify==4){
-            $data .='Status: <b style="color:red"> Application Rejected </b><br><small class="btn btn-danger">You Are Not eligible for apply </small>';  
-           }
+          
            $data .='   </div>
              <div class="col-md-6">
              <h4>Company Details</h4><br>

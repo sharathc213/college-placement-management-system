@@ -45,3 +45,17 @@ function viewapplication(comcode) {
         $(".table-section").html(data);
     });
 }
+
+
+function viewtd(value,comcode) {
+    if(value==2){
+    $.post("view/viewtd.php", {
+
+    comcode
+    }, function(data, status) {
+        // close the popup
+
+        $(".testd").html(data);
+    });
+}
+}

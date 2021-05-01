@@ -937,3 +937,115 @@ if (cpass == "") {
     );
     // Open modal popup
   }
+
+
+
+
+
+
+  function updateapplication(userid,jusl,jobcode) {
+    // get values
+    var option = $("#options").val();
+   
+    var test=111;
+    var check="ok";
+    if(option==2){
+      test=$("#test").val();
+      if(test==null || test==111){
+        $("#test_error").html("Please Select a test name");
+        check="kjgasdgk";
+      }else{
+        $("#test_error").html("");
+        check="ok";
+      }
+      
+    }else{
+      test="not";
+    }
+   
+   console.log(test);
+    if (
+         check=="ok"&&
+         option!=null &&
+         (test=="not" ||
+         test!=111)
+
+    ) {
+      Swal.fire({
+        title: "Are you sure Want to update?",
+  
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "red",
+        confirmButtonText: "Yes, Update it!",
+      }).then((result) => {
+        if (result.value) {
+          // Add record
+          $.post(
+            "eddit/updateapplication.php",
+            {
+               userid,
+               option,
+               test,
+               jusl,
+               jobcode
+           
+            },
+            function (data, status) {
+            
+  console.log(data);
+            
+  
+              if (data == 111) {
+
+  
+               
+  
+                Swal.fire({
+                  position: "center",
+                  icon: "success",
+                  title: "UPDATED",
+                  showConfirmButton: true,
+                  timer: 3000,
+                });
+              } else if (data == 110) {
+                Swal.fire({
+                  icon: "error",
+                  title: "Oops...",
+                  text: "Already assigned this test!",
+                });
+              } else {
+                Swal.fire({
+                  icon: "error",
+                  title: "Oops...",
+                  text: "Something went wrong!",
+                });
+              }
+            }
+          );
+        }
+      });
+    }
+  
+ 
+  }
+  
+  function verifypdf(cv) {
+    // Add User ID to the hidden field for furture usage
+  
+  //   $.post(
+  //     "eddit/viewpdf.php",
+  //     {
+  //  cv
+  //     },
+  //     function (data, status) {
+  //       // PARSE json data
+     var url="../admin/cv/pdfviwer.php?cv="+cv
+    
+        window.open(url, "_blank");
+      // }
+    // );
+    // Open modal popup
+  }
+  

@@ -118,7 +118,7 @@ if (isset($_POST['sl_no'])) {
                            </div>
                     
                            <div class="bio-row">
-                             <p><span>CV</span>:'.$cv.'   <button onclick="verifypdf('.$cv.');" class="btn btn-primary">view</button></p>
+                             <p><span>CV</span>:'.$cv.'   <button onclick="verifypdf(`'.$cv.'`);" class="btn btn-primary">view</button></p>
                            </div>
               
                            <div class="bio-row">
@@ -127,10 +127,11 @@ if (isset($_POST['sl_no'])) {
                              
                          </div>
                        </div>
+                       <div class="cv">
+                       </div>
                      </section>
                      <section>
-                       <div class="row">
-                       </div>
+                       
                      </section>
                    </div>
  

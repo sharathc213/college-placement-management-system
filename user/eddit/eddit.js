@@ -326,8 +326,32 @@ validate=0;
   
   }
 
-  function verifypdf(path){
+  // function verifypdf(path){
  
-    // window.open("../admin/demo.php?url="+path, "_blank");
-    window.location.href = '../admin/cv/'+path;
-   };
+  //   // window.open("../admin/demo.php?url="+path, "_blank");
+  //   window.location.href = '../admin/cv/'+path;
+  //  };
+  function verifypdf(cv) {
+    // Add User ID to the hidden field for furture usage
+  
+  //   $.post(
+  //     "eddit/viewpdf.php",
+  //     {
+  //  cv
+  //     },
+  //     function (data, status) {
+  //       // PARSE json data
+     var url="../admin/cv/pdfviwer.php?cv="+cv
+    
+        window.open(url, "_blank");
+      // }
+    // );
+    // Open modal popup
+  }
+
+
+
+ 
+  
+  
+  

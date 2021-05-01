@@ -79,9 +79,22 @@ $data = '
         <td>'.$jobcode.'</td>
         <td>'.$jobname.'</td>
         <td>'.$name.'</td>
-        <td>'.$qua.'</td>
-        <td>'.$status.'</td>
-      ';
+        <td>'.$qua.'</td>';
+        if($status==1){
+         
+          $data .= '  <td>Not Varified</td>';
+        }else if($status==2){
+          
+          $data .= '  <td>Assigned A test</td>';
+        }else if($status==3){
+          $data .= '  <td>Rejacted</td>';
+        }else if($status==4){
+          $data .= '  <td>Approved</td>';
+        }else if($status==5){
+          $data .= '  <td>Test Attended</td>';
+        }
+       
+  
       
 
        

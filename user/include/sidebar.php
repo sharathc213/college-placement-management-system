@@ -5,7 +5,20 @@
       </div>
 
       <!--logo start-->
-      <a href="index.html" class="logo">USER <span class="lite">Admin</span></a>
+      <a href="#" class="logo">USER <span class="lite">Admin</span></a>
+      <div class="nav search-row" id="top_menu" >
+        <!--  search form start -->
+        <ul class="nav top-menu ">
+          <li>
+            <form class="navbar-form">
+            <div id="display" style="font-size: 25px"class="lite">
+
+</div>
+            </form>
+          </li>
+        </ul>
+        <!--  search form end -->
+      </div>
       <!--logo end-->
 
 
@@ -13,6 +26,7 @@
       <div class="top-nav notification-row">
         <!-- notificatoin dropdown start-->
         <ul class="nav pull-right top-menu">
+ 
 
           <!-- task notificatoin start -->
           
@@ -66,12 +80,12 @@
                           <span>Dashboard</span>
                       </a>
           </li>
-          <li >
+          <!-- <li >
             <a class="" href="index.php?viewjobs">
                           <i class="icon_house_alt"></i>
                           <span>Find Jobs</span>
                       </a>
-          </li>
+          </li> -->
 
 
 

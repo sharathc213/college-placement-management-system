@@ -28,9 +28,6 @@ if (!isset($_SESSION['user'])  || !isset($_SESSION['username'])) {
           <div class="col-lg-12">
             <section class="panel">
 
-              <header class="panel-heading">
-                Your Application
-              </header>
      
              <div class="table-section"></div>
             </section>

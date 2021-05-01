@@ -375,10 +375,10 @@ value!=""
     }
   
   }
-  function verifypdf(path){
-    console.log("hai");
-    window.open("demo.php?url="+path, "_blank");
-   };
+  // function verifypdf(path){
+  //   console.log("hai");
+  //   window.open("demo.php?url="+path, "_blank");
+  //  };
 
 
 
@@ -501,4 +501,23 @@ if (cpass == "") {
       });
     }
   
+  }
+
+
+  function verifypdf(cv) {
+    // Add User ID to the hidden field for furture usage
+  
+  //   $.post(
+  //     "eddit/viewpdf.php",
+  //     {
+  //  cv
+  //     },
+  //     function (data, status) {
+  //       // PARSE json data
+     var url="../admin/cv/pdfviwer.php?cv="+cv
+    
+        window.open(url, "_blank");
+      // }
+    // );
+    // Open modal popup
   }
